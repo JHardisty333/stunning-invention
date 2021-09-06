@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <style>
+       body{
+        background-image: url('./assets/images/Background-photo.jpg');
+       }
+    </style>
+
+    <!-- Header -->
+    <div class="container-fluid">
+        <div class=" card flex-column min-80-vh">
+            <div class="card-body text-center header ">
+                <h1 class="card-header">Watch for the Weather</h1>
+            </div>
+
+            <!-- Search container -->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card-body text-center"></div>
+                        <div class="card" style="width: 20rem;">
+                            <h3 class="card-header text-uppercase">Search By City</h3>
+                            <form id="user-form">
+                                <input id="cityname" type="text" autofocus="true" class="form-input searchInput"
+                                    placeholder="Choose your City" />
+                                <button id="submit" type="button"
+                                    class="btn btn-outline-secondary searchButton">Search</button>
+                            </form>
+                            <hr>
+                        </div>
+                    </div>
+
+
+                    <div class="col mt-4 mr-5">
+                        <div class="card currentCity pb-2 pt-1" style="width: 20rem;">
+                            <h3 class="card-title mt-2 text-center">Current Weather</h3>
+                            <div class="currentWeather"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mt-4">
+                        <div class="card pb-5 pl-5" style="width: 50rem;">
+                            <h5 class="card-title mt-2 mr-5">5-Day Weather </h5>
+                            <div class="row fiveDayOne"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+<footer class="card-body text-center header">
+    <h4>Made by Jessica H. 🖤</h4>
+
+</footer>
+
+</html>
