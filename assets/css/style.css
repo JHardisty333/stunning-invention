@@ -1,0 +1,75 @@
+:root {
+    --primary: #304c54;
+    --secondary: #a86531;
+    --tertiary: #deddd5;
+    --light-dark: #acbdbc;
+    --dark: #152a36;
+    --border-radius: 15px;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #deddd5;
+}
+  
+.header {
+    color: var(--tertiary);
+    background-color: var(--light-dark);
+    padding: 1.0%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card-header {
+    background-color: var(--light-dark);
+    border-bottom: none;
+    border-radius: 15px;
+}
+  
+  .btn {
+      font-size: 1.3rem;
+      text-decoration:none;
+      padding: 6px 5px;
+      width: 100%;
+      display: block;
+      margin: 5px 0;
+      border-radius: var(--border-radius);
+      color: var(--primary);
+      border: none;
+      outline: none;
+      background-color: greenyellow;
+      box-shadow: 3px 3px var(--dark);
+      transform: translate(-1px, -1px);
+    }
+    
+     .btn:hover {
+      color: var(--primary);
+      background-color: var(--tertiary);
+      transform: translate(0, 0);
+      box-shadow: 2px 2px var(--dark);
+    }
+    
+    .card {
+      margin: 0 0 20px 0;
+      border: 3px solid var(--dark);
+      border-radius: var(--border-radius);
+      color: var(--primary);
+      background-color: var(--primary);
+    }
+    
+   
+    
+    .card-body {
+      padding: 2.5%;
+      /* affects weather cards and a strip alonmg the top */
+      /* background-color: var(--light-dark); */
+    }
+  
+    /* FONT UTILS */
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+    
