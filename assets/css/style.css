@@ -1,0 +1,56 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --grey: #e7dcd5;
+   --tan: #cc9260;
+   --white: #fffefe;
+   --green: #0d1f07;
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+   background: var(--grey);
+}
+
+.header {
+   color: var(--green);
+   text-shadow: 2px 2px 5px var(--white);
+   font-size: 50px;
+}
+
+#search-btn {
+   background: var(--tan);
+   border: var(--grey);
+}
+
+.icon-sm {
+   font-size: 3em;
+}
+
+.icon-lg {
+   font-size: 8em;
+   text-shadow: 2px 2px 5px var(--white);
+   padding: 0 10%;
+}
+
+.bg-orange {
+   background-color: coral;
+}
+
+.bg-extreme {
+   background-color: purple;
+}
+
+.five-day {
+   background: var(--grey);
+   color: var(--green);
+   border-radius: 8px;
+   border: 2px solid var(--tan);
+}
