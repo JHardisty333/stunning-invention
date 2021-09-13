@@ -2,71 +2,141 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Weather Dashbord</title>
 </head>
 
 <body>
+    <header class="hero mb-3">
+        <h1 class="header text-center pt-3 pb-4">Watch for the Weather</h1>
+    </header>
 
-    <!-- Header -->
-    <div class="container-fluid">
-        <div class="card flex-column min-80-vh">
-            <div class="card-body text-center header ">
-                <h1 class="card-header">Watch for the Weather</h1>
+    <main class="container-fluid my-3">
+        <div class="row">
+            <div class="col-12 col-md-4" id="city-form">
+                <form id="city-form">
+                    <h2 class="text-center mt-2">Search for a City:</h2>
+                    <input type="text" class="form-control mb-2" id="city" placeholder="Salt Lake City" />
+                    <div class="d-grid gap-2 mx-auto mb-3">
+                        <button class="btn btn-primary fs-6" id="search-btn">Search</button>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <div>
+                        <div class="border-top border-dark"></div>
+                    </div>
+                    <div class="col-12 mt-2" id="search-history">
+
+                    </div>
+                </div>
             </div>
 
-            <!-- Search container -->
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="card-body text-center"></div>
-                        <div class="card" style="width: 20rem;">
-                            <h3 class="card-header text-uppercase">Search By City</h3>
-                            <form id="user-form">
-                                <input id="cityname" type="text" autofocus="true" class="form-input searchInput"
-                                    placeholder="Choose your City" />
-                                <button id="submit" type="button"
-                                    class="btn btn-outline-secondary searchButton">Search</button>
-                            </form>
-                            <hr>
+
+            <div class="col-12 col-md-8 d-none" id="display-weather">
+                <div class="m-2 border border-dark">
+                    <div class="row p-2">
+                        <div class="col-7">
+                            <h3 id="weather-date-0"></h3>
+                            <p>Temp: <span id="temp-0"></span></p>
+                            <p>Wind: <span id="wind-0"></span></p>
+                            <p>Humidity: <span id="hum-0"></span></p>
+                            <p>UV Index: <span class="rounded px-2 py-1" id="uv-index"></span></p>
                         </div>
-                    </div>
 
-
-                    <div class="col mt-4 mr-5">
-                        <div class="card currentCity pb-2 pt-1" style="width: 20rem;">
-                            <h3 class="card-title mt-2 text-center">Current Weather</h3>
-                            <div class="currentWeather"></div>
+                        <div class="col-5">
+                            <div class="five-day">
+                                <i class="bi bi-cloud icon-lg" id="icon-0"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="mt-4">
-                        <div class="card pb-5 pl-5" style="width: 50rem;">
-                            <h5 class="card-title mt-2 mr-5">5-Day Weather </h5>
-                            <div class="row fiveDayOne"></div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xxl-2">
+                        <div class="m-2 five-day">
+                            <div class="p-2">
+                                <h4 class="text-center fs-6" id="weather-date-1"></h4>
+                                <i class="bi bi-cloud icon-sm" id="icon-1"></i>
+                                <p>Temp High: <span id="temp-1"></span></p>
+                                <p>Temp Low: <span id="temp-0-low"></span></p>
+                                <p>Wind: <span id="wind-1"></span></p>
+                                <p>Humidity: <span id="hum-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xxl-2">
+                        <div class="m-2 five-day">
+                            <div class="p-2">
+                                <h4 class="text-center fs-6" id="weather-date-2"></h4>
+                                <i class="bi bi-cloud icon-sm" id="icon-2"></i>
+                                <p>Temp High: <span id="temp-2"></span></p>
+                                <p>Temp Low: <span id="temp-1-low"></span></p>
+                                <p>Wind: <span id="wind-2"></span></p>
+                                <p>Humidity: <span id="hum-2"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xxl-2">
+                        <div class="m-2 five-day">
+                            <div class="p-2">
+                                <h4 class="text-center fs-6" id="weather-date-3"></h4>
+                                <i class="bi bi-cloud icon-sm" id="icon-3"></i>
+                                <p>Temp High: <span id="temp-3"></span></p>
+                                <p>Temp Low: <span id="temp-2-low"></span></p>
+                                <p>Wind: <span id="wind-3"></span></p>
+                                <p>Humidity: <span id="hum-3"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xxl-2">
+                        <div class="m-2 five-day">
+                            <div class="p-2">
+                                <h4 class="text-center fs-6" id="weather-date-4"></h4>
+                                <i class="bi bi-cloud icon-sm" id="icon-4"></i>
+                                <p>Temp High: <span id="temp-4"></span></p>
+                                <p>Temp Low: <span id="temp-3-low"></span></p>
+                                <p>Wind: <span id="wind-4"></span></p>
+                                <p>Humidity: <span id="hum-4"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xxl-2">
+                        <div class="m-2 five-day">
+                            <div class="p-2">
+                                <h4 class="text-center fs-6" id="weather-date-5"></h4>
+                                <i class="bi bi-cloud icon-sm" id="icon-5"></i>
+                                <p>Temp High: <span id="temp-5"></span></p>
+                                <p>Temp Low: <span id="temp-4-low"></span></p>
+                                <p>Wind: <span id="wind-5"></span></p>
+                                <p>Humidity: <span id="hum-5"></span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+    <p id="tempel"></p>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="./assets/js/script.js"></script>
 </body>
-
-<footer class="card-body text-center header">
-    <h4>Made by Jessica H. 🖤</h4>
-
-</footer>
 
 </html>

@@ -26,7 +26,7 @@ body {
 .card-header {
     background-color: var(--light-dark);
     border-bottom: none;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
 }
   
   .btn {
@@ -37,10 +37,10 @@ body {
       display: block;
       margin: 5px 0;
       border-radius: var(--border-radius);
-      color: var(--primary);
+      color: var(--tertiary);
       border: none;
       outline: none;
-      background-color: greenyellow;
+      background-color: var(--secondary);
       box-shadow: 3px 3px var(--dark);
       transform: translate(-1px, -1px);
     }
@@ -56,16 +56,12 @@ body {
       margin: 0 0 20px 0;
       border: 3px solid var(--dark);
       border-radius: var(--border-radius);
-      color: var(--primary);
+      color: var(--tertiary);
       background-color: var(--primary);
     }
     
-   
-    
     .card-body {
       padding: 2.5%;
-      /* affects weather cards and a strip alonmg the top */
-      /* background-color: var(--light-dark); */
     }
   
     /* FONT UTILS */
