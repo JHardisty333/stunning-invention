@@ -235,12 +235,12 @@ function displayHistory() {
             mobileHistoryCounter++;
             if (mobileHistoryCounter > 3) {
                 $("#search-history")
-                    .append("<button class='bg-secondary bg-gradient col-12 mt-2 p-1 text-center rounded text-white d-none d-md-block'"
+                    .append("<button class='bg-secondary col-12 mt-2 p-1 text-center rounded text-white d-none d-md-block'"
                         + "id='history-btn' value='" + searchHistory[i] + "'>" + searchHistory[i] + "</div");
             }
             else {
                 $("#search-history")
-                    .append("<button class='bg-secondary bg-gradient col-12 mt-2 p-1 text-center rounded text-white'"
+                    .append("<button class='bg-secondary col-12 mt-2 p-1 text-center rounded text-white'"
                         + "id='history-btn' value='" + searchHistory[i] + "'>" + searchHistory[i] + "</div");
             }
         }
