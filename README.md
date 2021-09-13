@@ -12,7 +12,7 @@ The following animation demonstrates the application functionality:
 
 ## Website link 
 
-`https://jhardisty333.github.io/stunning-invention/`
+https://jhardisty333.github.io/stunning-invention/
 
 
 ## Built With
