@@ -3,7 +3,7 @@
 ## Week 6 Challenge
 
 ## Scope
-A dashboard for users to see the weather outlook for multiple cities so that they may plan their trips accordingly.
+A dashboard for users to see the weather outlook for multiple cities so that they may plan their trips accordingly. Dashboard features the ability to search for a desired city which returns current weather information as well as a 5-day forecast. Weather information includes conditions, temperature, humidity, wind speed, and the UV index that is color indicated.
 
 ## Mockup 
 The following animation demonstrates the application functionality:
